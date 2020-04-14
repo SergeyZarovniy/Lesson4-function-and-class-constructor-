@@ -18,30 +18,44 @@
 // -form
 // -option
 // -select
-// Приклад результату
-// {
-//     titleOfTag: 'area',
-//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
-//     attrs: [
-//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
-//     {/*some props and values*/},
-//     {/*...*/},
-//     {/*...*/},
-// ]
-function TagConstr(titleOfTag, action, attrs) {
-    this.titleOfTag = titleOfTag || 'No Tag';
-    this.action = action || 'No Action';
-    this.attrs = attrs || [];
-}
-let tittle = "<a>";
-let act = "Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов name или href тег <a> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы.";
-let arrAttr = [
-    {name:"download",acting:"Предлагает скачать указанный по ссылке файл."},
-    {name:"name",acting:"Устанавливает имя якоря внутри документа."},
-    {name:"rel",acting:"Отношения между ссылаемым и текущим документами."}
-];
-let tag = new TagConstr(tittle,act,arrAttr);
-console.log(tag);
+
+//FOR ATRIBUT <A>
+// const arrAtr = [
+//     {atrTitle:'accesskey', atrAction: 'Активация ссылки с помощью комбинации клавиш.'},
+//     {atrTitle: 'hreflang', atrAction: 'Идентифицирует язык текста по ссылке.'},
+//     {atrTitle: 'rel', atrAction: 'Отношения между ссылаемым и текущим документами.'}
+// ];
+// const arrAtr2 = [
+//     {atrTitle:'accesskey', atrAction:'Позволяет получить доступ к элементу с помощью заданного сочетания клавиш.'},
+//     {atrTitle:'class', atrAction:'Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'},
+//     {atrTitle:'contextmenu', atrAction:'Устанавливает контекстное меню для элемента.'}
+// ];
+//
+// function TagConstr(titleOfTag, action, attrs) {
+//     this.titleOfTag = titleOfTag || 'No Tag';
+//     this.action = action || 'No Action';
+//     this.attrs = arrAtr2.map(function (arrItem) {
+//         return arrItem;
+//     })
+// }
+// let tag = new TagConstr('<div>','Create block element',[]);
+// console.log(tag);
+
+///////////////////////////////////////////////////////////////////
+// function TagConstr(titleOfTag, action, attrs) {
+//     this.titleOfTag = titleOfTag || 'No Tag';
+//     this.action = action || 'No Action';
+//     this.attrs = attrs || [];
+// }
+// let tittle = "<a>";
+// let act = "Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов name или href тег <a> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы.";
+// let arrAttr = [
+//     {name:"download",acting:"Предлагает скачать указанный по ссылке файл."},
+//     {name:"name",acting:"Устанавливает имя якоря внутри документа."},
+//     {name:"rel",acting:"Отношения между ссылаемым и текущим документами."}
+// ];
+// let tag = new TagConstr(tittle,act,arrAttr);
+// console.log(tag);
 
 // ==============================================
 //
@@ -67,17 +81,22 @@ console.log(tag);
 // -option
 // -select
 // Приклад результату
-// {
-//     titleOfTag: 'area',
-//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
-//     attrs: [
-//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
-//     {/*some props and values*/},
-//     {/*...*/},
-//     {/*...*/},
-// ]
-//
+// const arrAtr = [
+//     {atrTitle:'accesskey', atrAction: 'Активация ссылки с помощью комбинации клавиш.'},
+//     {atrTitle: 'hreflang', atrAction: 'Идентифицирует язык текста по ссылке.'},
+//     {atrTitle: 'rel', atrAction: 'Отношения между ссылаемым и текущим документами.'}
+// ];
+// class Tag {
+//     constructor(titleOfTag,action,attrs) {
+//         this.titleOfTag = titleOfTag;
+//         this.action = action;
+//         this.attrs = arrAtr.map(function (classItem) {
+//             return classItem;
+//         })
+//     }
 // }
+// let tag = new Tag ('<a>','create Link',[]);
+// console.log(tag);
 // ==============================================
 //
 //
@@ -90,8 +109,11 @@ console.log(tag);
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
-//
-//
+let car = {
+   model:'Mazda',
+
+};
+
 // ==============================================
 //     - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
