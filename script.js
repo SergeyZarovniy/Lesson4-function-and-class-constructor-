@@ -109,11 +109,42 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
-let car = {
-   model:'Mazda',
-
-};
-
+// let car = {
+//    model:'6',
+//     company:'Mazda Motors',
+//     year: 2002,
+//     maxSpeed: 240,
+//     engine: 2.0,
+//     driverMan:'empty car',
+//
+//     drive: function() {
+//        console.log(`Driving with ${car.maxSpeed} per hour`)
+//     },
+//     info: function() {
+//         console.log(
+//             `model = ${this.model},
+//             company = ${this.company},
+//             year = ${this.year},
+//             maxSpeed = ${this.maxSpeed},
+//             engine = ${this.engine}
+//             driverMan = ${this.driverMan}`
+//         );
+//     },
+//     increaseMaxSpeed: function(newSpeed) {
+//        this.maxSpeed += newSpeed;
+//     },
+//     changeYear: function (newValue) {
+//        this.year = newValue;
+//     },
+//     addDriver: function (driver) {
+//         this.driverMan = driver;
+//     }
+// }
+// car.changeYear(2015);
+// let driver = 'Serghei Zarovnii';
+// car.increaseMaxSpeed(100);
+// car.addDriver(driver);
+// car.info();
 // ==============================================
 //     - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
