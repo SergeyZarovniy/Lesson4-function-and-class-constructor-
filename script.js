@@ -152,6 +152,53 @@
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+function CarCreate (model,
+                    company,
+                    year,
+                    maxSpeed,
+                    engine,) {
+    this.model = model || '6';
+    this.company = company || 'Mazda';
+    this.year = year || 2002;
+    this.maxSpeed = maxSpeed || 260;
+    this.engine = engine || 2.0;
+    this.mrDriver = 'driver';
+
+    this.drive = function () {
+        console.log(`Driving with ${maxSpeed} km per hour`)
+    };
+
+    this.info = function () {
+        console.log(
+            `model = ${this.model}
+        company = ${this.company}
+        year = ${this.year}
+        maxSpeed = ${this.maxSpeed}
+         engine = ${this.engine}
+         mrDriver = ${this.mrDriver}`
+        )
+    };
+
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxSpeed += newSpeed
+    };
+
+    this.changeYear = function (newValue) {
+        this.year = newValue
+    };
+
+    this.addDriver = function (driver) {
+        this.mrDriver = driver
+    }
+}
+let driverr = 'Ivan Skripnik';
+let car = new CarCreate('X6','BMW',2020,350,3.5);
+let car2 = new CarCreate();
+car2.info();
+car.addDriver(driverr);
+car.info();
+
+
 // ==============================================
 //
 // ==============================================
