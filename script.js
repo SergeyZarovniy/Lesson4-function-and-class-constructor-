@@ -152,51 +152,51 @@
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-function CarCreate (model,
-                    company,
-                    year,
-                    maxSpeed,
-                    engine,) {
-    this.model = model || '6';
-    this.company = company || 'Mazda';
-    this.year = year || 2002;
-    this.maxSpeed = maxSpeed || 260;
-    this.engine = engine || 2.0;
-    this.mrDriver = 'driver';
-
-    this.drive = function () {
-        console.log(`Driving with ${maxSpeed} km per hour`)
-    };
-
-    this.info = function () {
-        console.log(
-            `model = ${this.model}
-        company = ${this.company}
-        year = ${this.year}
-        maxSpeed = ${this.maxSpeed}
-         engine = ${this.engine}
-         mrDriver = ${this.mrDriver}`
-        )
-    };
-
-    this.increaseMaxSpeed = function (newSpeed) {
-        this.maxSpeed += newSpeed
-    };
-
-    this.changeYear = function (newValue) {
-        this.year = newValue
-    };
-
-    this.addDriver = function (driver) {
-        this.mrDriver = driver
-    }
-}
-let driverr = 'Ivan Skripnik';
-let car = new CarCreate('X6','BMW',2020,350,3.5);
-let car2 = new CarCreate();
-car2.info();
-car.addDriver(driverr);
-car.info();
+// function CarCreate (model,
+//                     company,
+//                     year,
+//                     maxSpeed,
+//                     engine,) {
+//     this.model = model || '6';
+//     this.company = company || 'Mazda';
+//     this.year = year || 2002;
+//     this.maxSpeed = maxSpeed || 260;
+//     this.engine = engine || 2.0;
+//     this.mrDriver = 'driver';
+//
+//     this.drive = function () {
+//         console.log(`Driving with ${maxSpeed} km per hour`)
+//     };
+//
+//     this.info = function () {
+//         console.log(
+//             `model = ${this.model}
+//         company = ${this.company}
+//         year = ${this.year}
+//         maxSpeed = ${this.maxSpeed}
+//          engine = ${this.engine}
+//          mrDriver = ${this.mrDriver}`
+//         )
+//     };
+//
+//     this.increaseMaxSpeed = function (newSpeed) {
+//         this.maxSpeed += newSpeed
+//     };
+//
+//     this.changeYear = function (newValue) {
+//         this.year = newValue
+//     };
+//
+//     this.addDriver = function (driver) {
+//         this.mrDriver = driver
+//     }
+// }
+// let driverr = 'Ivan Skripnik';
+// let car = new CarCreate('X6','BMW',2020,350,3.5);
+// let car2 = new CarCreate();
+// car2.info();
+// car.addDriver(driverr);
+// car.info();
 
 
 // ==============================================
@@ -208,6 +208,52 @@ car.info();
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// class Car {
+//     constructor(model, company,year,maxSpeed, engine) {
+//         this.model = model || 'F22-Raptor';
+//         this.company = company || 'American Farce';
+//         this.year = year || 2005;
+//         this.maxSpeed = maxSpeed || 1200;
+//         this.engine = engine || 205;
+//         this.driverr = "Auto Pilot";
+//
+//         this.drive = function () {
+//             console.log(`We are driving with ${maxSpeed} km per hour`)
+//         };
+//
+//         this.info = function () {
+//             console.log(`
+//             model = ${this.model}
+//             company = ${this.company}
+//             year = ${this.year}
+//             maxSpeed = ${this.maxSpeed}
+//             engine = ${this.engine}
+//             driver = ${this.driverr}
+//             `)
+//         };
+//
+//         this.increaseMaxSpeed = function (newSpeed) {
+//             this.maxSpeed += newSpeed
+//         };
+//         this.changeYear = function (newValue) {
+//             this.year = newValue
+//         };
+//
+//         this.addDriver = function (driver) {
+//            this.driverr = driver
+//         }
+//     }
+//
+// }
+// let car = new Car(911,'Porshe',2019,350,'EcoBoost 5.0');
+// car.info();
+// car.drive();
+// let car2 = new Car();
+// car2.increaseMaxSpeed(1000);
+// car2.info();
+// let pilot = 'Jone Bones Jones';
+// car2.addDriver(pilot);
+// car2.info();
 // ==============================================
 //
 //
@@ -216,6 +262,63 @@ car.info();
 // --Створити 10 попелюшок , покласти їх в масив
 // --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
+// class cinderella {
+//     constructor (name,age,footSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSiza = footSize;
+//     }
+// }
+// let cinderella1 = new cinderella('Yana',25,37.5);
+// let cinderella2 = new cinderella('Lina',24,36);
+// let cinderella3 = new cinderella('Katy',35,38);
+// let cinderella4 = new cinderella('Margo',22,36.5);
+// let cinderella5 = new cinderella('Tamara',27,39);
+// let cinderella6 = new cinderella('Vika',21,69);
+// let cinderella7 = new cinderella('Sabrina',19,37);
+// let cinderella8 = new cinderella('Olla',14,35);
+// let cinderella9 = new cinderella('Agata',21,39);
+// let cinderella10 = new cinderella('Agneshka',45,40);
+//
+// let cinderArr = [
+//     cinderella1,cinderella2,cinderella3,cinderella4,cinderella5,
+//     cinderella6,cinderella7,cinderella8,cinderella9,cinderella10
+// ];
+//
+// class Prince {
+//     constructor (name,age,slipper) {
+//         this.name = name || 'No name';
+//         this.age = age || 'No age';
+//         this.slipper = slipper || 'No slipper';
+//     }
+//FIRST OPTION
+//     findCinderella (array) {
+//         let find = null;
+//         for (const cind of array)  {
+//             if (cind.footSiza === this.slipper ) {
+//                 find=cind;
+//             }
+//         }
+//         if(find) {
+//             console.log(`I found my cinderella! Her name is ${find.name}`);
+//
+//     } else {
+//         console.log('I didnt find anything')}
+//     }
+// }
+// let prince = new Prince('Vasia',25,37.5);
+// prince.findCinderella(cinderArr);
+// SECOND OPTION
+// findCinderella (array) {
+//     const find = array.find(cinderella => cinderella.footSiza === this.slipper )
+//     find
+//     ? console.log (`I find my cinderella!!! My cinderella is ${find.name}`)
+//     : console.log ('I didnt find any girl');
+// }
+// let prince = new Prince('Zarovnii Serghei',28,37,5);
+// prince.findCinderella(cinderArr);
+
+
 // ==============================================
 //
 //
@@ -226,3 +329,38 @@ car.info();
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 // ==============================================
+function Cinderella (name,age,footSize) {
+    this.name = name;
+    this.age = age;
+    this.footSiza = footSize;
+}
+let cinderella1 = new Cinderella('Yana',25,37.5);
+let cinderella2 = new Cinderella('Lina',24,36);
+let cinderella3 = new Cinderella('Katy',35,38);
+let cinderella4 = new Cinderella('Margo',22,36.5);
+let cinderella5 = new Cinderella('Tamara',27,39);
+let cinderella6 = new Cinderella('Vika',21,69);
+let cinderella7 = new Cinderella('Sabrina',19,37);
+let cinderella8 = new Cinderella('Olla',14,35);
+let cinderella9 = new Cinderella('Agata',21,39);
+let cinderella10 = new Cinderella('Agneshka',45,40);
+
+let cinderArr = [
+    cinderella1,cinderella2,cinderella3,cinderella4,cinderella5,
+    cinderella6,cinderella7,cinderella8,cinderella9,cinderella10
+];
+
+function PrinceCreator(name,age,finderSlipper) {
+    this.name = name;
+    this.age = age;
+    this.finderSlipper = finderSlipper;
+
+   this.findCinderella = function (array) {
+       const find = array.find(cinderella => cinderella.footSiza === this.finderSlipper);
+       find
+           ? console.log(`I found my cinderella!!! Her name is ${find.name}`)
+           : console.log('I didnt find anything');
+   }
+}
+let prince = new PrinceCreator('Zarovnii Serghei',28,37.5);
+prince.findCinderella(cinderArr);
